@@ -65,3 +65,31 @@ void draw() {
   f.display();
 }
 ```
+
+### Exercici 4
+
+La part clau de l'exercici és trobar el vector entre el mouse i l'objecte i tractar-lo per a poder-lo aplicar a l'objecte coma  a velocity.
+```java
+Mover m;
+float speed = 3;
+
+void setup() {
+  size(1280, 640);
+  m = new Mover();
+}
+
+void draw() {
+  background(255);
+  
+  // Trobem el vector entre el mouse i l'objecte Mover
+  PVector v = new PVector(mouseX - m.location.x, mouseY - m.location.y);
+  
+  // Normalitzem el vector trobat, el multipliquem per a poder augmentar/disminuir la velocitat i el posem com a velocitat de l'objecte m.
+  m.velocity = v.normalize().mult(speed);
+  
+  // Actualitzem l'objecte Mover
+  m.update();
+  m.checkEdges();
+  m.display();
+}
+```
