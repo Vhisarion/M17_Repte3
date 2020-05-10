@@ -38,3 +38,30 @@ class Faller extends Mover{
 ```
 
 També he considerat oportú canviar-li el color per a poder diferenciar els objectes Mover dels Faller
+
+### Exercici 3
+
+He afegit un constructor amb paràmetre PVector acceleration per a isntanciar objectes Faller amb una acceleració personalitzada. 
+```java
+Faller(PVector acceleration) {
+   super();
+   this.acceleration = acceleration;
+  }
+```
+
+I l'he instanciat amb la següent línia
+```java
+  f = new Faller(new PVector(random(-1,1),random(-1,1)));
+```
+
+Amb això és suficient, ja que el constructor de Mover ja implementa la velocitat aleatòria.
+
+Simplement cal actualitzar l'objecte en el mètode **draw()**:
+```java
+void draw() {
+  background(255);
+  f.update();
+  f.checkEdges();
+  f.display();
+}
+```
