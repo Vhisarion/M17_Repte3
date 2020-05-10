@@ -5,6 +5,7 @@ class Mover {
   velocity = new PVector(random(-2,2),random(-2,2));
  }
  void update() {
+  velocity = (new PVector(mouseX - location.x, mouseY - location.y)).normalize().mult(speed);
   location.add(velocity); 
  }
  void display() {
@@ -26,27 +27,26 @@ class Mover {
  }
 }
 
-Mover m;
+Mover[] movers = new Mover[60];
 float speed = 3;
 
 void setup() {
   size(1280, 640);
-  m = new Mover();
+  for (int i = 0; i < 60; i++) {
+    movers[i] = new Mover();
+  }
+  
 }
 
 void draw() {
   background(255);
   
-  // Trobem el vector entre el mouse i l'objecte Mover
-  PVector v = new PVector(mouseX - m.location.x, mouseY - m.location.y);
-  
-  // Normalitzem el vector trobat, el multipliquem per a poder augmentar/disminuir la velocitat i el posem com a velocitat de l'objecte m.
-  m.velocity = v.normalize().mult(speed);
-  
-  // Actualitzem l'objecte Mover
-  m.update();
-  m.checkEdges();
-  m.display();
+  // Actualitzem els objectes Mover
+  for (Mover m : movers) {
+    m.update();
+    m.checkEdges();
+    m.display();
+  }
 }
 
 
