@@ -12,4 +12,4 @@ Té un mètode **update()** que modifica la posició afegint-hi el vector veloci
 
 Té un mètode **display()** que pinta una el·lipse representant l'objecte Mover amb un radi de 16px en la posició actual de l'objecte.
 
-Té un mètode **checkEdged()** que detecte si l'objecte s'ha sortit dels marges de la pantalla, i si ho ha fet el torna a posar dins dels marges.
+Té un mètode **checkEdged()** que detecte si l'objecte s'ha sortit dels marges de la pantalla, i si ho ha fet fa que aparegui a l'altre banda de la pantalla.
