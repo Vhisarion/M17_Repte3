@@ -93,3 +93,31 @@ void draw() {
   m.display();
 }
 ```
+
+###Exercici 5
+
+He refactoritzat el codi de l'exercici anterior i posat el càlcul del vector velocitat cap al ratolí dins del mètode **update()** de Mover.
+
+Per a instanciar els 60 objectes Mover, faig un bucle que es repetirà 60 vegades i els guardo en un array de Movers inicialitzat anteriorment.
+Així, per a actualitzar-los, només he de recórrer l'array i actualitzar cada element.
+
+```java
+void setup() {
+  size(1280, 640);
+  for (int i = 0; i < 60; i++) {
+    movers[i] = new Mover();
+  }
+  
+}
+
+void draw() {
+  background(255);
+  
+  // Actualitzem els objectes Mover
+  for (Mover m : movers) {
+    m.update();
+    m.checkEdges();
+    m.display();
+  }
+}
+```
