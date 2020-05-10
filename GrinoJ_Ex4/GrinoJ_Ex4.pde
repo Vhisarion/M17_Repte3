@@ -43,7 +43,7 @@ void draw() {
   // Normalitzem el vector trobat, el multipliquem per a poder augmentar/disminuir la velocitat i el posem com a velocitat de l'objecte m.
   m.velocity = v.normalize().mult(speed);
   
-  println(m.velocity);
+  // Actualitzem l'objecte Mover
   m.update();
   m.checkEdges();
   m.display();
