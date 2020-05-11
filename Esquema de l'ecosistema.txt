@@ -1,0 +1,25 @@
+Tipus de animals de l'ecosistema:
+Zona de vegetació: 
+	- No es mou
+	- No s'alimenta
+	- Apareixen aleatòriament en la finestra
+
+Herbívor:
+	- S'alimenta de plantes
+	- Es mou aleatòriament amb preferència a seguir el líder.
+	- Quan s'alimenta, es reprodueix.
+	- Si hi ha un depredador a prop, s'intenten escapar
+	
+Herbívor líder:
+	- Com un herbívor normal, però decideix cap a quina zona de vegetació es mourà tot el grup. Tria la zona de vegetació que tingui més a prop.
+	- Si mor, tots els animals que el seguien es desbanden i comencen a moure aleatòriament.
+	
+Carnívor: 
+	- Quan té gana, es mou cap a l'herbívor més pròxim.
+	- Quan s'alimenta, té una probabilitat de reproduir-se.
+	- Quan s'alimenta, s'atipa i deixa de perseguir herbívors fins que torna a tenir gana.
+	- Si está molt a prop d'un altre carnívor, un es menja a l'altre aleatòriament.
+	
+	
+Tots els animals es poden moure en 8 direccions. Tindràn els atributs de gana i velocitat. (Potser afegir-hi % de reproducció, i potser força en els depredadors).
+A part, tindràn també els clàssics location, però no tindràn velocitat (en plan constant).
