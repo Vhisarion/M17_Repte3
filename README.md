@@ -121,3 +121,42 @@ void draw() {
   }
 }
 ```
+
+### Exercici 6
+
+He creat un projecte completament nou.
+
+#### Funcionament General
+Representa un ecosistema abstracte, on existeixen dos tipus d'elements: Zones de Vegetació i Animals.
+Hi ha dos tipus d'animals, herbívors i carnívors.
+
+Els animals herbívors es mengen les zones de vegetació, mentre que els carnívors es mengen als herbívors.
+Els animals herbívors s'escapen si s'els acosta un carnívor.
+Els animals carnívors lluiten entre sí quan s'acosten massa. Guanya el més gran.
+
+
+##### Zones de Vegetació
+Estan representades per cercles verds. Regeneren vegetació amb el temps, però desapareixen si s'esgoten completament i n'apareix una de nova. Com més intens és el verd, més vegetació conté.
+
+##### Animals Herbívors
+Estàn representats per petits cercles blaus.
+El seu tret més distintiu és el moviment, ja que al principi de la simulació es designa un d'ells com a líder.
+
+El líder és el que decideix cap a on anirà tota la manada, i els que no són líders intenten seguir-lo i quedar-se al voltant seu.
+Si el líder mor, la manada es desbanda i segueixen un moviment aleatori fins que moren.
+
+Si estàn massa temps sense menjar, moren.
+
+La gana que tenen està representada amb la intensitat del color. Com més apagat, més gana tenen.
+
+##### Animals Carnívors
+Estàn representats per cercles blaus lleugerament diferents en radi.
+
+El seu moviment es caracteritza per definir objectius i moure's en la seva direcció. Quan han arribat a l'objectiu(presa), la devoren i es queden en moviment aleatori fins que tornen a tenir gana.
+Tenen un factor de mandra que influeix en el temps que tarden a tornar a perseguir una presa.
+
+Si s'acosten entre si, lluiten, i el més gran guanya.
+
+Si estàn massa temps sense menjar, moren.
+
+La gana que tenen està representada amb la intensitat del color. Com més apagat, més gana tenen.
